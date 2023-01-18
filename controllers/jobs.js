@@ -6,7 +6,7 @@ const getJob = async (req, res) => {
   res.send("Get job");
 };
 
-const createJobs = async (req, res) => {
+const createJob = async (req, res) => {
   res.send("Create job");
 };
 
@@ -14,14 +14,14 @@ const updateJobs = async (req, res) => {
   res.send("Update job");
 };
 
-const deleteJobs = async (req, res) => {
+const deleteJob = async (req, res) => {
   res.send("Delete job");
 };
 
 module.exports = {
   getAllJobs,
   getJob,
-  createJobs,
+  createJob,
   updateJobs,
-  deleteJobs,
+  deleteJob,
 };
