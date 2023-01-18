@@ -34,6 +34,8 @@ const UserSchema = new mongoose.Schema({
     trim: true,
     unique: true,
     minlength: 6,
-    maxlength: 50,
+    maxlength: 12,
   },
 });
+
+module.exports = mongoose.model("User", UserSchema);
