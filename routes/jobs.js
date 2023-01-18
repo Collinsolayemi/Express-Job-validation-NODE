@@ -1,12 +1,13 @@
-const register = async (req, res) => {
-  res.send("Register users");
-};
+const express = require("express");
+const router = express.Router();
 
-const logIn = async (req, res) => {
-  res.send("LogIn users");
-};
+const {
+  getAllJobs,
+  getJob,
+  createJobs,
+  updateJobs,
+  deleteJobs,
+} = require("../controllers/jobs");
 
-module.exports = {
-  register,
-  logIn,
-};
+router.routes("/").get(getAllJobs, createJobs);
+router.routes("/:id").get(getJob).patch(updateJobs).delete(deleteJobs);
